@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai4.SafeSqlValidatorTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-08-26T08:07:57.755Z" hostname="DESKTOP-MFF1I3E" time="0.593">
+  <properties/>
+  <testcase name="Mở rộng: Báo lỗi khi chuỗi đầu vào rỗng hoặc chỉ có khoảng trắng" classname="com.example.bai4.SafeSqlValidatorTest" time="0.125"/>
+  <testcase name="Input 1: Tự động thêm LIMIT 100 khi câu lệnh chưa có LIMIT" classname="com.example.bai4.SafeSqlValidatorTest" time="0.126"/>
+  <testcase name="[1] dangerousSql = &quot;SELECT * FROM deliveries; SELECT * FROM users&quot;" classname="com.example.bai4.SafeSqlValidatorTest" time="0.027"/>
+  <testcase name="[2] dangerousSql = &quot;SELECT * FROM deliveries /* inline comment */ WHERE id = 1&quot;" classname="com.example.bai4.SafeSqlValidatorTest" time="0.002"/>
+  <testcase name="[3] dangerousSql = &quot;SELECT * FROM deliveries WHERE id = 1 AND (DELETE FROM logs)&quot;" classname="com.example.bai4.SafeSqlValidatorTest" time="0.02"/>
+  <testcase name="[4] dangerousSql = &quot;SELECT * FROM deliveries WHERE 1=1; DROP TABLE deliveries&quot;" classname="com.example.bai4.SafeSqlValidatorTest" time="0.006"/>
+  <testcase name="Input 2: Giữ nguyên khi LIMIT &lt;= 100" classname="com.example.bai4.SafeSqlValidatorTest" time="0.012"/>
+  <testcase name="Input 4 (Độc hại): Ném SecurityException khi không bắt đầu bằng SELECT" classname="com.example.bai4.SafeSqlValidatorTest" time="0.025"/>
+  <testcase name="Input 5 (Lách luật): Ném SecurityException khi chứa ký tự comment (--)" classname="com.example.bai4.SafeSqlValidatorTest" time="0.007"/>
+  <testcase name="Input 3: Ép về LIMIT 100 khi LIMIT &gt; 100" classname="com.example.bai4.SafeSqlValidatorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
